@@ -1,0 +1,16 @@
+
+CREATE TABLE `user` (
+  `user_id` varchar(25) character set utf8 NOT NULL,
+  `g_reg_no` varchar(25) character set utf8 NOT NULL,
+  `name` varchar(100) character set utf8 NOT NULL,
+  `password` varchar(32) character set utf8 NOT NULL,
+  `birth_date` date NOT NULL,
+  `email` varchar(50) character set utf8 NOT NULL,
+  `cell_phone` varchar(30) character set utf8 NOT NULL,
+  `gender` varchar(20) character set utf8 NOT NULL,
+  `professional_status` tinytext NOT NULL,
+  `speciality` varchar(100) NOT NULL,
+  `short_biography` text character set utf8,
+  `image` int(10) NOT NULL,
+  PRIMARY KEY  (`user_id`,`g_reg_no`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;

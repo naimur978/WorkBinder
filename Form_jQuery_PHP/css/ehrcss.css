@@ -1,0 +1,483 @@
+/* top elements */
+* { margin:0; 	padding: 0; }
+
+body {
+	margin: 0; padding: 0;
+	font: 70%/1.5em  Verdana, Tahoma, Arial,sans-serif;
+	color: #333; 
+	/* background: #FFF url(bg.gif) repeat-x; */	
+	text-align: center; 
+}
+
+/* links */
+a {
+	color: #3B5E93; 
+	background-color: inherit;
+	text-decoration: none;
+}
+a:hover {
+	color: #575757;
+	background-color: inherit;
+}
+
+/* headers */
+h1, h2, h3 {
+	font-family: 'Trebuchet MS', Tahoma, Verdana, Sans-serif;
+	font-weight: Bold; 		
+}
+h1 {
+	font-size: 145%;	
+	padding: 10px 10px 5px 10px;
+	color: #75A54B;
+	background-color: inherit;
+	border-bottom: 1px solid #EFF0F1;		
+}
+h2 {
+	font-size: 125%;
+	text-transform: uppercase;
+}
+h3 {
+	font-size: 125%;	
+	color: #404040;
+}
+
+h2, h3, p {
+	padding: 10px;		
+	margin: 0;
+}
+
+/* images */
+img {
+	border: 3px solid #D5D5D5;
+}
+img.float-right {
+  margin: 5px 0px 5px 10px;  
+}
+img.float-left {
+  margin: 5px 10px 5px 0px;
+}
+
+#sidebar h1, 
+#sidebar p {
+	padding-left: 0;
+}
+
+ul, ol {
+	margin: 10px 20px;
+	padding: 0 20px;
+}
+
+code {
+  margin: 5px 0;
+  padding: 10px;
+  text-align: left;
+  display: block;
+  overflow: auto;  
+  font: 500 1em/1.5em 'Lucida Console', 'courier new', monospace;
+  /* white-space: pre; */
+  background: #FAFAFA;
+  border: 1px solid #f2f2f2;  
+  border-left: 4px solid #FF9966;
+}
+acronym {
+  cursor: help;
+  border-bottom: 1px solid #777;
+}
+blockquote {
+	margin: 10px;
+ 	padding: 0 0 0 32px;  	
+  	background: #FAFAFA url(quote.gif) no-repeat 5px 10px !important; 
+	background-position: 8px 10px;
+	border: 1px solid #f2f2f2; 
+	border-left: 4px solid #FF9966;   
+}
+
+div.right
+{
+float:left;
+width:230px;
+height:auto;
+margin:auto;
+padding: 5px 0px 0px 10px;
+
+}
+
+div.middle
+{
+float:left;
+width:600px;
+height:auto;
+margin:auto;
+padding: 5px 10px 5px 0px;
+
+text-align:justify;
+}
+
+/* search form */
+form.search {
+	position: absolute;
+	top: 15px; right: 5px;
+	padding: 0; margin: 0;
+	border: none;
+	background-color: transparent; 
+}
+form.search input.textbox { 
+	margin: 0; 
+	width: 120px;
+	border: 1px solid #CCC; 
+	background: #FFF;
+	color: #333; 	
+	vertical-align: top;
+}
+form.search input.button {
+	width: 60px;
+	vertical-align: top;
+}
+
+/**************************************
+   LAYOUT 
+***************************************/	
+#wrap {
+	margin: 0 auto; 
+	padding: 0; 
+	width: 850px;
+	text-align: left;
+}
+
+#mydiv {
+	clear:both; 
+	background-image:linear-gradient(#FFF, #B2B2B2);
+}
+
+
+/* header */
+#header { 
+	position: relative;
+	height: 70px; 
+	margin: 0; padding: 0;
+	color: #808080; 		
+}
+#header h1#logo {
+	position: absolute;	
+	font: bold 3.9em "trebuchet MS", Arial, Tahoma, Sans-Serif;
+	margin: 0; padding:0;
+	color: #51517D;
+	letter-spacing: -2px;	
+	border: none;	
+	
+	/* change the values of top and Left to adjust the position of the logo*/
+	top: 0; left: 2px;		
+}
+#header h1#logo span { color: #7070B8; }
+
+#header h2#slogan { 
+	position: absolute;
+	margin: 0; padding: 0;	
+	font: bold 12px Arial, Tahoma, Sans-Serif;	
+	text-transform: none;
+	
+	/* change the values of top and Left to adjust the position of the slogan*/
+	top: 43px; left: 45px;
+}
+
+/* menu */
+#menu {
+	clear: both;
+	background: url(menu.gif) repeat;
+	height: 30px;
+	margin: 0;
+	font: bolder 1.2em/30px Tahoma, Verdana, Arial, Sans-Serif;	
+	/*background: #3B5E93;	*/
+}
+#menu ul{
+	margin: 0; padding: 0 0 0 8px;
+}
+#menu ul li {
+	float: left;
+	list-style: none;		
+	border-right: 1px solid #0D56B5;
+}
+#menu ul li a {
+	display: block;
+	text-decoration: none;	
+	padding: 0 15px;
+	color: #FFF;	
+}
+#menu ul li a:hover {
+  	color: #333;	
+	background: #B6C8DA;
+}
+#menu ul li#current a {
+	color: #333;
+	background: #B6C8DA;	
+}
+
+/* sidebar */
+#sidebar {
+	float: left;
+	width: 21%; 
+	margin: 0;	padding: 0; 
+	display: inline;
+}
+#sidebar ul.sidemenu {
+	list-style: none;
+	text-align: left;
+	margin: 0 0 7px 0; padding: 0;
+	text-decoration: none;	
+}
+#sidebar ul.sidemenu li {
+	border-bottom: 1px solid #EFF0F1;	
+	background: url(arrow.gif) no-repeat 3px 6px;	
+	padding: 2px 5px 2px 20px;
+}
+
+* html body #sidebar ul.sidemenu li { height: 1%; }
+
+#sidebar ul.sidemenu li a {
+	font-weight: bolder;
+	background-image: none;
+	text-decoration: none;	
+}
+
+#rightbar {
+	float: right;
+	width: 21%;
+	padding: 0;
+	margin: 0; 			
+}
+
+/* main column */
+#main {
+	float: left;
+	margin: 0 0 0 15px;
+	padding: 0;
+	width: 54%;	
+}
+
+.post-footer {
+	background-color: #FAFAFA;
+	padding: 5px; margin: 15px 10px 10px 10px;
+	border: 1px solid #f2f2f2; 
+	font-size: 95%;
+}
+.post-footer .date {
+	background: url(clock.gif) no-repeat left center;
+	padding-left: 20px; margin: 0 10px 0 5px;
+}
+.post-footer .comments {
+	background: url(comment.gif) no-repeat left center;
+	padding-left: 20px; margin: 0 10px 0 5px;
+}
+.post-footer .readmore {
+	background: url(page.gif) no-repeat left center;
+	padding-left: 20px; margin: 0 10px 0 5px;
+}
+
+/* footer */
+#ebody { 
+	clear: both; 	
+	background-color: #F8F8F8 ; 
+/*background-image: linear-gradient(
+      #FFF, #B2B2B2 
+    ); 
+	height: 60px*/
+}
+
+
+/* footer */
+#footer { 
+	clear: both; 	
+	color: #393B3E; 	
+	padding: 0;	 
+	/*background: #FFF url(footerbg.gif) repeat-x;*/
+	background-color: #D1DAE3; 
+	height: 40px
+}
+#footer a { 
+	text-decoration: none; 
+	font-weight: bold;
+}
+#footer-content {
+	margin: 0 auto;
+	width: 800px
+}
+#footer-content #footer-left {
+	padding: 10px;
+	width: 60%;
+	float: left;
+	text-align: left;
+}
+#footer-content #footer-right {
+	padding: 10px;
+	width: 33%;
+	float: right;
+	text-align: right;
+}
+
+/* alignment classes */
+.float-left  { float: left; }
+.float-right { float: right; }
+.align-left  { text-align: left; }
+.align-right { text-align: right; }
+
+/* additional classes */
+.clear  { clear: both; }
+.green  { color: #75A54B; }
+/* Home NEWS Show Scrool Section */
+
+
+.gradient {
+  background-image:
+    linear-gradient(
+      #FFF, #B2B2B2 
+    );
+}
+
+
+
+#home-page li {
+	width:230px;
+	height:370px;
+	float:left;
+	/*background:#1d202a;*/
+	  background-image:
+    linear-gradient(
+       #1d202a, #333385
+    );
+	position:relative;
+	right: 40px;
+}
+#home-page .title-nav {
+	height:46px;
+	line-height:46px;
+	background:url(css/title_nav_bg.png) repeat-x
+}
+#home-page .title-nav h2 {
+	font-size:20px;
+	padding-left:46px;
+}
+.title-nav h2 {
+	height:100%;
+	background:url(css/title_icons.png) no-repeat;
+	color:#fff;
+	float:left
+}
+#home-page #home-con li.about h2 {
+	background-position:0 0
+}
+#home-page #home-con li.blog h2 {
+	background-position:0 -46px
+}
+#home-page #home-con li.contact h2 {
+	background-position:0 -92px
+}
+#home-page #home-con .con {
+	padding:20px;
+}
+#home-page #home-con .con h3 {
+	font-size:18px;
+	color:#fff;
+	margin-top:15px;
+}
+#home-page #home-con .con p {
+	font-size:14px;
+}
+#home-page #home-con .btns {
+	height:40px;
+	position:absolute;
+	left:20px;
+	bottom:20px;
+}
+#home-page #home-con .btns a {
+	display:inline-block;
+	height:40px;
+	line-height:40px;
+	padding:0 15px;
+	margin-right:6px;
+	background:#11719f;
+	color:#fff;
+	font-weight:bold
+}
+#home-page #home-con .contact .con p {
+	height:30px;
+	padding:0 0 25px 50px;
+	font-size:12px;
+	line-height:1.2;
+	color:#6a7796
+}
+#home-page #home-con .contact .con p img {
+	float:left;
+	margin-left:-45px;
+	border: 1px solid #333;
+}
+#home-page #home-con .contact .con p strong {
+	display:block;
+	color:#fff
+}
+#home-page #home-con .contact .net-links {
+	height:30px;
+	padding:10px 20px 0
+}
+#home-page #home-con .contact .net-links img {
+	margin:0 5px;
+		border: 1px solid #333;
+}
+.col_w640 { width: 560px; margin: 0px 20px; float: left }
+
+.image_wrapper { display: inline-block; border: 1px solid #333; padding: 8px; background: #444; margin-bottom: 5px; }
+.image_fl { float: left; margin: 3px 15px 0 0; }
+.image_fr { float: right; margin: 3px 0 0 15px; }
+
+/* Button Style http://button.csscook.com/*/
+
+.btn-style{
+	border : solid 2px #ffffff;
+	border-radius : 8px;
+	moz-border-radius : 8px;
+	-webkit-box-shadow : inset 0px 0px 5px rgba(0,0,0,1.0);
+	-moz-box-shadow : inset 0px 0px 5px rgba(0,0,0,1.0);
+	box-shadow : inset 0px 0px 5px rgba(0,0,0,1.0);
+	font-size : 18px;
+	color : #e4edd0;
+	padding : 1px 10px;
+	background : #053494;
+	background : -webkit-gradient(linear, left top, left bottom, color-stop(0%,#053494), color-stop(100%,#95afc2));
+	background : -moz-linear-gradient(top, #053494 0%, #95afc2 100%);
+	background : -webkit-linear-gradient(top, #053494 0%, #95afc2 100%);
+	background : -o-linear-gradient(top, #053494 0%, #95afc2 100%);
+	background : -ms-linear-gradient(top, #053494 0%, #95afc2 100%);
+	background : linear-gradient(top, #053494 0%, #95afc2 100%);
+	filter : progid:DXImageTransform.Microsoft.gradient( startColorstr='#053494', endColorstr='#95afc2',GradientType=0 );
+}
+
+
+div.content
+{
+margin-left:190px;
+border-left:1px solid gray;
+padding:3em;
+}
+
+/* contact page */
+
+.content_box { padding-bottom: 20px; margin-bottom: 20px; background: url(css/hr_divider.jpg) bottom repeat-x }
+.cb_last { padding-bottom: 0; margin-bottom: 0; background: none }
+.col_w300 { width: 280px; margin: 0px 40px 0px 0px; float: left }
+.col_w640 { width: 560px; margin: 0px 40px; float: left }
+.col_last { margin-right: 0 }
+.col_first { margin-left: 40px; }
+
+.cleaner { clear: both }
+.h40 { height: 40px }
+
+
+#templatemo_content { clear: both; width: 980px; padding: 0 20px 40px }
+#templatemo_content h2 { /* text-shadow: 1px 1px 1px #333; */ margin-bottom: 25px }
+#templatemo_content p { margin-bottom: 15px }
+
+#contact_form { width: 440px;  padding: 0; }
+#contact_form form { margin: 0px; padding: 0px; }
+#contact_form form .input_field { color: #fff; width: 350px; padding: 5px; background: #181818; border: 1px solid #444 }
+#contact_form form label { display: block; color: #ccc; width: 100px; margin-right: 10px; font-size: 14px; }
+
+#contact_form form textarea { font-family: Arial, Helvetica, sans-serif; color: #fff; width: 350px;  height: 200px; padding: 5px; background: #181818; border: 1px solid #444 }
