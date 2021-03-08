@@ -1,2 +1,2 @@
 # WorkBinder
- 7th Semester Project Work
+6th Semester's Project Work
